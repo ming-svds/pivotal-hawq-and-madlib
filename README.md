@@ -3,7 +3,7 @@
 This document details steps involved in preparing a Pivotal-Hawq and Madlib environment through Docker containers. 
 
 ##### Notes:
-Where initial goal was to integrate Pivotal Hawq into Cloudera or Hortonworks Data Platform. The following difficulties listed below were quickly discovered that resulted in taking alternative option of using Docker containers. 
+Where initial goal was to integrate Pivotal Hawq into Cloudera or Hortonworks Data Platform. The difficulties listed below were quickly discovered that resulted in taking alternative option of using Docker containers. 
 
 ###### June 2015
 Installation instructions from Pivotal website (http://hawq.docs.pivotal.io/) is out-of-sync with actual content of jars from download links. With most documentations referencing the complete Pivotal HD suite, but no instructions on how to install standalone Hawq.
@@ -22,12 +22,12 @@ It's interesting on Madlib's official installation page. When it comes to Pivota
 Latest Madlib installation doc provided by Pivotal that can be found is dated back in 2010. (http://pivotalhd-210.docs.pivotal.io/doc/2010/InstallingtheHAWQComponents.html#InstallingtheHAWQComponents-InstallingMADlibonHAWQ) 
 
 
-The install script 'hawq_install.sh' mentioned is no where to be found on Pivotal HD.
+Likely due to doc outdateness, the install script 'hawq_install.sh' mentioned here could not be found on Pivotal HD.
 
 > Once HAWQ installation is complete, run the following command to install MADlib:
 > hawq_install.sh -r <RPM_FILEPATH> -f <HOSTFILE> [-s] [-d <GPHOME>] [--prefix <MADLIB_INSTALL_PATH>]
 
-Likely due to doc outdatedness, the underlying madpack.py called has an erroneous parameter usage. The underlying python script was updated to have -h option param removed before further installation can continue.
+The underlying madpack.py called has an erroneous parameter usage. The underlying python script was updated to have -h option param removed before further installation can continue.
 
 > Run the following command to register MADlib in your database:
 > $GPHOME/madlib/bin/madpack -p hawq -c $USER@$HOST/$DATABASE install
