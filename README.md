@@ -32,5 +32,8 @@ The underlying madpack.py called has an erroneous parameter usage. The underlyin
 > Run the following command to register MADlib in your database:
 > $GPHOME/madlib/bin/madpack -p hawq -c $USER@$HOST/$DATABASE install
 
+###### JSON
+Reading JSON file into Hawq is supported by Pivotal, but PXF framework needs to be installed.
+http://pivotal-field-engineering.github.io/pxf-field/json.html
 
 
